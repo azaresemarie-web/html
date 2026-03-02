@@ -1,145 +1,14 @@
-body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
-}
-
-.navbar{
-    background-color: #222;
-    padding: 12px;
-    position: sticky;
-    top: 0;
-}
-
-.navbar a{
-    color: white;
-    text-decoration: none;
-    margin-right: 15px;
-    font-weight: bold;
-}
-
-.navbar a:hover{
-    text-decoration: underline;
-}
-
-.container{
-    max-width: 1000px;
-    margin: auto;
-    padding: 16px;
-}
-
-.section{
-    background-color: white;
-    padding: 18px;
-    margin-top: 14px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-.footer{
-    text-align: center;
-    padding: 18px;
-    color: #555;
-}
-
-.button{
-    display: inline-block;
-    padding: 10px 14px;
-    background-color: #1e66ff;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.button:hover{
-    background-color: #174fca;
-}
-
-.grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-}
-
-.card{
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 12px;
-}
-
-.price{
-    font-weight: bold;
-    color: #1e66ff;
-}
-
-.small{
-    color: #666;
-    font-size: 14px;
-}
-
-label{
-    font-weight: bold;
-}
-
-input, select, textarea{
-    width: 100%;
-    padding: 9px;
-    margin-top: 6px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-
-textarea{
-    height: 100px;
-}
-
-.submit{
-    width: auto;
-    padding: 10px 14px;
-    border: none;
-    background-color: #222;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.submit:hover{
-    background-color: #000;
-}
-
-.note{
-    background-color: #e8f0ff;
-    border: 1px solid #cfe0ff;
-    padding: 12px;
-    border-radius: 8px;
-}
-
-@media (max-width: 900px){
-    .grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px){
-    .grid{
-        grid-template-columns: 1fr;
-    }
-}
-/* HERO BACKGROUND (HOMEPAGE) */
-.hero-bg{
-    height: 100vh;              /* full screen height */
+/* HALF SCREEN HERO */
+.hero-half{
+    height: 50vh; /* only half screen */
     background-image: url("bg.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
 }
 
-/* dark overlay so text is readable */
-.hero-bg::before{
+/* dark overlay */
+.hero-half::before{
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -148,9 +17,9 @@ textarea{
 
 /* HEADER */
 .header{
-    position: relative;  /* stays above overlay */
+    position: relative;
     z-index: 2;
-    padding: 18px 0;
+    padding: 15px 0;
 }
 
 .header-inner{
@@ -165,7 +34,6 @@ textarea{
 .logo-text{
     color: white;
     font-weight: bold;
-    font-size: 20px;
 }
 
 .navlinks a{
@@ -183,7 +51,7 @@ textarea{
 .hero-content{
     position: relative;
     z-index: 2;
-    height: calc(100vh - 70px); /* keeps it centered under header */
+    height: calc(50vh - 60px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -194,23 +62,21 @@ textarea{
 
 .hero-content h1{
     color: white;
-    font-size: 52px;
+    font-size: 42px;
     margin: 0;
 }
 
 .hero-content p{
-    color: #dddddd;
-    margin-top: 10px;
-    margin-bottom: 18px;
-    font-size: 16px;
+    color: #ddd;
+    margin: 10px 0 18px 0;
 }
 
-/* RENT NOW BUTTON */
+/* RENT BUTTON */
 .rent-btn{
-    background-color: #f6b400;   /* yellow */
+    background-color: #f6b400;
     color: black;
     font-weight: bold;
-    padding: 12px 22px;
+    padding: 10px 20px;
     border-radius: 999px;
     text-decoration: none;
 }
@@ -219,13 +85,29 @@ textarea{
     background-color: #d99e00;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px){
-    .hero-content h1{
-        font-size: 36px;
-    }
-    .navlinks a{
-        margin-left: 10px;
-        font-size: 14px;
-    }
+
+/* DETAILS SECTION */
+.details-section{
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.details-container{
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 16px;
+    display: flex;
+    gap: 20px;
+}
+
+.detail-box{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.detail-box h2{
+    margin-top: 0;
 }
