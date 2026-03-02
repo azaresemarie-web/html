@@ -1,0 +1,134 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Rental Catalogue - SnapCam Rentals</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <style>
+        
+    </style>
+    <body>
+
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="catalogue.html">Rental Catalogue</a>
+            <a href="delivery.html">Delivery</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h1>Rental Catalogue</h1>
+                <p class="small">
+                    Choose a camera below. Since this site has no JavaScript, the checkout is done using a simple order form.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Available Digicams</h2>
+
+                <div class="grid">
+                    <div class="card">
+                        <h3>Canon PowerShot A590</h3>
+                        <p class="price">₱250 / day</p>
+                        <p class="small">Good for casual photos. Includes battery + charger.</p>
+                        <p><b>Item Code:</b> CAM-001</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Sony Cyber-shot W830</h3>
+                        <p class="price">₱300 / day</p>
+                        <p class="small">Compact and sharp. Great for travel.</p>
+                        <p><b>Item Code:</b> CAM-002</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Nikon Coolpix S3300</h3>
+                        <p class="price">₱260 / day</p>
+                        <p class="small">Easy to use. Perfect for events.</p>
+                        <p><b>Item Code:</b> CAM-003</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Fujifilm FinePix JX500</h3>
+                        <p class="price">₱280 / day</p>
+                        <p class="small">Nice colors and simple controls.</p>
+                        <p><b>Item Code:</b> CAM-004</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Canon IXUS 105</h3>
+                        <p class="price">₱320 / day</p>
+                        <p class="small">Sleek design. Good for birthdays.</p>
+                        <p><b>Item Code:</b> CAM-005</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Sony Cyber-shot TX7</h3>
+                        <p class="price">₱350 / day</p>
+                        <p class="small">Very portable. Premium look.</p>
+                        <p><b>Item Code:</b> CAM-006</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Order Form</h2>
+                <p class="small">
+                    Fill out this form to request a rental. (This is a sample form — it won’t actually send without a backend.)
+                </p>
+
+                <form action="#" method="post">
+                    <label for="fullname">Full Name</label>
+                    <input id="fullname" type="text" name="fullname" placeholder="Your full name" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" type="text" name="phone" placeholder="09XX-XXX-XXXX" required>
+
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" placeholder="you@example.com" required>
+
+                    <label for="itemcode">Choose Camera (Item Code)</label>
+                    <select id="itemcode" name="itemcode" required>
+                        <option value="">-- Select --</option>
+                        <option value="CAM-001">CAM-001 - Canon PowerShot A590 (₱250/day)</option>
+                        <option value="CAM-002">CAM-002 - Sony Cyber-shot W830 (₱300/day)</option>
+                        <option value="CAM-003">CAM-003 - Nikon Coolpix S3300 (₱260/day)</option>
+                        <option value="CAM-004">CAM-004 - Fujifilm FinePix JX500 (₱280/day)</option>
+                        <option value="CAM-005">CAM-005 - Canon IXUS 105 (₱320/day)</option>
+                        <option value="CAM-006">CAM-006 - Sony Cyber-shot TX7 (₱350/day)</option>
+                    </select>
+
+                    <label for="days">Rental Days</label>
+                    <input id="days" type="number" name="days" min="1" placeholder="Example: 2" required>
+
+                    <label for="address">Delivery Address</label>
+                    <input id="address" type="text" name="address" placeholder="Complete address" required>
+
+                    <label for="notes">Notes (Optional)</label>
+                    <textarea id="notes" name="notes" placeholder="Example: Need it for a birthday on Saturday"></textarea>
+
+                    <button class="submit" type="submit">Submit Rental Request</button>
+                </form>
+
+                <div class="note" style="margin-top:12px;">
+                    <p class="small">
+                        <b>Reminder:</b> Total price = (price per day) × (rental days) + delivery fee + deposit.
+                        Check the <a href="delivery.html"><b>Delivery</b></a> page for fees.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p>© 2026 SnapCam Rentals</p>
+        </div>
+
+    </body>
+</html>
