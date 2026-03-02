@@ -132,7 +132,7 @@ textarea{
 /* HERO BACKGROUND (HOMEPAGE) */
 .hero-bg{
     height: 100vh;              /* full screen height */
-    background-image: url("bg.jpg");
+    background-image: url("header.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
