@@ -129,3 +129,103 @@ textarea{
         grid-template-columns: 1fr;
     }
 }
+/* HERO BACKGROUND (HOMEPAGE) */
+.hero-bg{
+    height: 100vh;              /* full screen height */
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* dark overlay so text is readable */
+.hero-bg::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.65);
+}
+
+/* HEADER */
+.header{
+    position: relative;  /* stays above overlay */
+    z-index: 2;
+    padding: 18px 0;
+}
+
+.header-inner{
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.navlinks a{
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-weight: bold;
+}
+
+.navlinks a:hover{
+    text-decoration: underline;
+}
+
+/* HERO CONTENT */
+.hero-content{
+    position: relative;
+    z-index: 2;
+    height: calc(100vh - 70px); /* keeps it centered under header */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 16px;
+}
+
+.hero-content h1{
+    color: white;
+    font-size: 52px;
+    margin: 0;
+}
+
+.hero-content p{
+    color: #dddddd;
+    margin-top: 10px;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+/* RENT NOW BUTTON */
+.rent-btn{
+    background-color: #f6b400;   /* yellow */
+    color: black;
+    font-weight: bold;
+    padding: 12px 22px;
+    border-radius: 999px;
+    text-decoration: none;
+}
+
+.rent-btn:hover{
+    background-color: #d99e00;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px){
+    .hero-content h1{
+        font-size: 36px;
+    }
+    .navlinks a{
+        margin-left: 10px;
+        font-size: 14px;
+    }
+}
